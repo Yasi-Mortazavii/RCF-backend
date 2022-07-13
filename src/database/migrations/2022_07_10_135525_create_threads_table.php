@@ -26,10 +26,7 @@ class CreateThreadsTable extends Migration
                 ->constrained()
                 ->onDelete('cascade');
 
-//            Best Answer Id
-            $table->foreignId('answer_id')
-                ->constrained()
-                ->onDelete('cascade');
+
             $table->timestamps();
         });
     }

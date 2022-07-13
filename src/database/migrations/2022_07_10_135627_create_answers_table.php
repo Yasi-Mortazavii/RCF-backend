@@ -22,6 +22,9 @@ class CreateAnswersTable extends Migration
             $table->foreignId('channel_id')
                 ->constrained()
                 ->onDelete('cascade');
+            //            Best Answer Id
+            $table->unsignedBigInteger('answer_id');
+            $table->boolean('flag')->default(1);
             $table->timestamps();
         });
     }
